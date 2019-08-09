@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ * @var $block Cinovic\Otplogin\Controller\Account\OtpPost
+ */
+/** @var Cinovic\Otplogin\Controller\Account\OtpPost $block */
+?>
+<form class="form otp" action="<?= $block->escapeUrl($block->getUrl('otplogin/account/otppost')) ?>" method="post" id="form-validate" data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
+        <div class="field otp required">
+            <label for="otp" class="label"><span><?= $block->escapeHtml(__('OTP')) ?></span></label>
+            <div class="control">
+                <input type="password" name="otp" alt="otp" id="otp" class="input-text" data-validate="{required:true, 'validate-text':true}">
+            </div>
+        </div>
+        <?= $block->getChildHtml('form_additional_info') ?>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary"><span><?= $block->escapeHtml(__('Enter OTP')) ?></span></button>
+        </div>
+        <div class="secondary">
+            <a name="email" href="<?= $block->escapeUrl($block->getUrl('otplogin/account/resendotp')) ?>"><span><?= $block->escapeHtml(__('Resend OTP')) ?></span></a>
+        </div>
+    </div>
+</form>

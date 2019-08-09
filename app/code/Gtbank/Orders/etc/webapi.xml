@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/guest-carts/:cartId/orderConfirmation" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="getOrderConfirmation"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>	
+	<route url="/V1/ordersDetails" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="getOrders"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	<route url="/V1/cancel-order" method="POST">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="cancelOrder"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	<route url="/V1/cancel-order-detail/:itemId" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="cancelOrderDetail"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	<route url="/V1/print-invoice/:itemId" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="printInvice"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+	<route url="/V1/itemDetails/:itemId" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="getItemDetails"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	
+	<route url="/V1/repeat-item/:itemId" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="getRepeatItemOrder"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	
+	
+	<route url="/V1/guest-carts/:cartId/delivery-commnent" method="POST">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="deliveryCommnent"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/guest-carts/:cartId/delivery-commnent" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="getDeliveryCommnent" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	
+	<route url="/V1/return-order-detail/:itemId" method="GET">
+        <service class="Gtbank\Orders\Api\RmaInterface" method="returnOrderDetail"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+	<route url="/V1/return-order" method="POST">
+        <service class="Gtbank\Orders\Api\RmaInterface" method="returnOrder"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	
+	<route url="/V1/order-traking/:trakingId" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="OrderTrakingDetails"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	<route url="/V1/applyDiscount/:quoteId" method="POST">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="applyDiscount"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	
+	<route url="/V1/marchantTotal/:quoteId" method="GET">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="marchantTotal"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+	
+	<route url="/V1/orderDetailsById" method="POST">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="orderDetailsById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/cancelOrders" method="POST">
+        <service class="Gtbank\Orders\Api\OrderInterface" method="cancelOrders"/>
+        <resources>
+            <resource ref="admin"/>
+        </resources>
+    </route>
+	
+</routes>

@@ -1,0 +1,20 @@
+
+{{template config_path="design/email/header_template"}} <!-- pathe of template header-->
+
+
+<table>
+    <tr class="email-information">
+        <td>
+            <table class="order-details">
+                <tr>
+                    <td class="address-details">
+                        <h3>{{trans "Otp_Code"}}</h3>
+                        <p>{{var myvar1|raw}}</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}} <!--footer of template-->
