@@ -2,15 +2,14 @@
     "name": "cinovic/module-otplogin",
     "description": "OTP Extension for Magento 2",
     "require": {
-        "php": "~7.0.0"
+        "php": "~5.5.0|~5.6.0|~7.0.0|~7.2.14"
     },
     "type": "magento2-module",
+    "version": "1.1.1",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
     ],
-    "version": "1.1.1",
-    "minimum-stability": "dev",
     "keywords": [
       "magento 2",
       "magento 2 otplogin"
