@@ -4,7 +4,7 @@
 **OTPLOGIN Extension for Magento 2** helps the owner of store simply install **OTPLOGIN** by which user can login using otp.Through it, otp send to user email.
 
 
-## 1. How to install SMTP Extension
+## 1. How to install OTPLOGIN Extension
 
 ### Install via composer (recommend)
 
